@@ -6,7 +6,7 @@ para baixar este arquivo basta no seu terminal rodar o comando:
 ```
 git clone https://github.com/gabritsxp/Aproved-Disapproved-SystemFile.git
 ```
-e logo depois para rodar:
+e logo depois exclua os arquivos aprovados e reprovados e rode:
 ```
 py ac05.py
 ```
