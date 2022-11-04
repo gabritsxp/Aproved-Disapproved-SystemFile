@@ -1,4 +1,6 @@
-# abre  o arquivo notas.txt
+
+
+# Abre  o arquivo notas.txt
 notas_txt = open('notas.txt', 'r', encoding='UTF-8')
 
 todos_alunos = []
@@ -16,7 +18,7 @@ for linha in notas_txt:
     substitutiva = alunos[8]
     faltas = alunos[9]
 
-    # define as notas das acs
+    # Define as notas das acs
     notas_acs = []
     notas_acs.append(ac1)
     notas_acs.append(ac2)
@@ -45,23 +47,22 @@ for linha in notas_txt:
     if (faltas <= 20):
         reprovou_por_faltas = False
 
-    # guarda os valores em todos os alunos:
+    # Guarda os valores em todos os alunos:
     todos_alunos.append([id, nome, media_final, reprovou_por_faltas])
 
     #Ordena os valores em ordem alfabética
 todos_alunos.sort(key=lambda x: x[1])
 
-# abre  o arquivo aprovados e reprovados
+# Abre  o arquivo aprovados e reprovados
 aprovados = open('aprovados.txt', 'w', encoding='UTF=8')
 reprovados = open('reprovados.txt', 'w',encoding='UTF=8')
 
-# verifica se o aluno foi aprovado ou não, e direciona-o para seu arquivo pertencente
+# Verifica se o aluno foi aprovado ou não, e direciona-o para seu novo arquivo
 for i in range(len(todos_alunos)):
     if todos_alunos[i][2] >= 6 and todos_alunos[i][3] != True:
         aprovados.write(todos_alunos[i][1] + "\n")
     else:
         reprovados.write(todos_alunos[i][1] + "\n")
-    
 
 
 
@@ -74,29 +75,3 @@ for i in range(len(todos_alunos)):
 
 
 
-
-
-#     notas = []
-#     for nota in alunos:
-#         if (nota == alunos[2] or
-#             nota == alunos[3] or
-#             nota == alunos[4] or
-#             nota == alunos[5] or
-#             nota == alunos[6] or
-#             nota == alunos[7] or
-#             nota == alunos[8] or
-#                 nota == alunos[9]):
-#             notas.append(nota)
-
-#     converte o array de notas em float
-#     for i in range(len(notas)):
-#         notas[i] = float(notas[i])
-
-#     # calcula média
-#     media = sum(notas) / len(notas)
-
-#     todos_alunos.append([id, nome, media])
-
-# # ordena os alunos em ordem alfabética
-# todos_alunos.sort(key=lambda x: x[1])
-# print(todos_alunos)
